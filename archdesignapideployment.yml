@@ -15,6 +15,9 @@ spec:
       containers:
         - name: architacturalapi
           image: 735521274598293/architacturalapi:latest
+          securityContext:
+            runAsUser: 0 # This specifies running as the root user
+            runAsGroup: 0 # This specifies running as the root group
           ports:
             - containerPort: 8080
           env:
@@ -38,3 +41,10 @@ spec:
                 secretKeyRef:
                   name: architectural-secret
                   key: password
+          volumeMounts:
+            - name: filedata
+              mountPath: /app/Logs
+      volumes:
+        - name: filedata
+          persistentVolumeClaim:
+            claimName: file-volume
