@@ -6,17 +6,17 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
+    # - host: arcdesignapi.service.com
+    #   http:
+    #     paths:
+    #       - path: /
+    #         pathType: Prefix
+    #         backend:
+    #           service:
+    #             name: architacturalapi-loadbalancer-service
+    #             port:
+    #               number: 80
     - host: arcdesignapi.service.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: architacturalapi-loadbalancer-service
-                port:
-                  number: 80
-    - host: arcdesignapinewversion.service.com
       http:
         paths:
           - path: /
