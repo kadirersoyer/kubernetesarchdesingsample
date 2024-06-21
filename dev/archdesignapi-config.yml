@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: config-map
+  name: archdesignapi-config
 data:
   ApiVersion: "1.4"
   ConsulVersion: Consulversion1.4

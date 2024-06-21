@@ -24,22 +24,22 @@ spec:
             - name: ConsulVersion
               valueFrom:
                 configMapKeyRef:
-                  name: config-map
+                  name: archdesignapi-config
                   key: ConsulVersion
             - name: ApiVersion
               valueFrom:
                 configMapKeyRef:
-                  name: config-map
+                  name: archdesignapi-config
                   key: ApiVersion
             - name: ApiUserName
               valueFrom:
                 secretKeyRef:
-                  name: architectural-secret
+                  name: archdesignapi-secret
                   key: username
             - name: ApiPassword
               valueFrom:
                 secretKeyRef:
-                  name: architectural-secret
+                  name: archdesignapi-secret
                   key: password
           volumeMounts:
             - name: filedata
