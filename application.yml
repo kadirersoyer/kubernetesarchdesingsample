@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: "https://github.com/your-username/your-repo.git"
+    repoURL: "https://github.com/kadirersoyer/kubernetesarchdesingsample.git"
     targetRevision: HEAD
     path: dev
 
